@@ -25,6 +25,8 @@ Plug 'arthurxavierx/vim-caser'
 
 `vim-caser` makes it easy to convert between multiple word casings, from `camelCase` to `snake_case` to `Title Case`, it blends nicely with Vim's editing features such as _motions_, _text objects_ and _visual mode_.
 
+All mappings below must be followed by a motion or a text object, or be applied within visual mode.
+
  Case | Mapping
 ------|---------
 `MixedCase`  | `gsm`
@@ -35,6 +37,8 @@ Plug 'arthurxavierx/vim-caser'
 `space case` | `gs<space>`
 `kebab-case` | `gsk` or `gs-`
 `dot.case`   | `gs.`
+
+The `gs` prefix can be changed through the option `g:caser_prefix`.
 
 ### Limitations
 Currently `vim-caser` only supports the casing options displayed in the table above. If you would like to have another casing option in `vim-caser`, please feel free to create an issue in this repository, or to submit a pull request with the feature properly documented.
