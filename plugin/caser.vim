@@ -66,7 +66,6 @@ endfunction
 function! s:MapAction(key, fn)
   exe 'nnoremap <silent> '.g:caser_prefix.a:key.' :<C-U>call <SID>ActionSetup("caser#'.a:fn.'")<CR>g@'
   exe 'xnoremap <silent> '.g:caser_prefix.a:key.' :<C-U>call <SID>DoAction("caser#'.a:fn.'",visualmode())<CR>'
-  exe 'nnoremap <silent> '.g:caser_prefix.a:key.a:key.' :<C-U>call <SID>DoAction("caser#'.a:fn.'",v:count1)<CR>'
 endfunction
 " }}}
 
