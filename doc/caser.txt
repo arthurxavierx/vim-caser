@@ -19,13 +19,15 @@ gsc{motion}                                        *gsc* *caser-camel*
 {Visual}gsc             Make {motion} or highlighted text `camelCase`
                         (for {Visual} see |Visual-mode|).
 
+gs_{motion}                                        *gs_*
 gss{motion}                                        *gss* *caser-snake*
-{Visual}gss             Make {motion} or highlighted text `snake_case`
-                        (for {Visual} see |Visual-mode|).
+{Visual}gs_             Make {motion} or highlighted text `snake_case`
+{Visual}gss             (for {Visual} see |Visual-mode|).
 
-gsu{motion}                                        *gsu* *caser-upper*
+gsu{motion}                                        *gsu*
+gsU{motion}                                        *gsU* *caser-upper*
 {Visual}gsu             Make {motion} or highlighted text `UPPER_CASE`
-                        (for {Visual} see |Visual-mode|).
+{Visual}gsU             (for {Visual} see |Visual-mode|).
 
 gst{motion}                                        *gst* *caser-title*
 {Visual}gst             Make {motion} or highlighted text `TitleCase`
