@@ -1,0 +1,59 @@
+*vim-caser*    Handy commands for changing word casing
+
+    Author:  Arthur Xavier (https://github.com/arthurxavierx)
+   License:  GNU GPL 3
+Repository:  https://github.com/arthurxavierx/vim-caser
+
+==============================================================================
+
+Change casing of words, sentences, paragraphs, selections, or anything vim
+allows you to select with a |movement|, a |text-object| or |Visual-mode|.
+
+------------------------------------------------------------------------------
+
+gsm{motion}                                        *gsm* *caser-mixed*
+{Visual}gsm             Make {motion} or highlighted text `MixedCase`
+                        (for {Visual} see |Visual-mode|).
+
+gsc{motion}                                        *gsc* *caser-camel*
+{Visual}gsc             Make {motion} or highlighted text `camelCase`
+                        (for {Visual} see |Visual-mode|).
+
+gss{motion}                                        *gss* *caser-snake*
+{Visual}gss             Make {motion} or highlighted text `snake_case`
+                        (for {Visual} see |Visual-mode|).
+
+gsu{motion}                                        *gsu* *caser-upper*
+{Visual}gsu             Make {motion} or highlighted text `UPPER_CASE`
+                        (for {Visual} see |Visual-mode|).
+
+gst{motion}                                        *gst* *caser-title*
+{Visual}gst             Make {motion} or highlighted text `TitleCase`
+                        (for {Visual} see |Visual-mode|).
+
+gs<space>{motion}                            *gs<space>* *caser-space*
+{Visual}gs<space>       Make {motion} or highlighted text `space case`
+                        (for {Visual} see |Visual-mode|).
+
+gs-{motion}                                        *gs-*
+gsk{motion}                                        *gsk* *caser-kebab*
+{Visual}gs-             Make {motion} or highlighted text `kebab-case`
+{Visual}gsk             (for {Visual} see |Visual-mode|).
+
+gs.{motion}                                        *gs.* *caser-kebab*
+{Visual}gs.             Make {motion} or highlighted text `dot.case`
+                        (for {Visual} see |Visual-mode|).
+
+------------------------------------------------------------------------------
+
+OPTIONS                                                *caser-options*
+
+                                                      *g:caser_prefix*
+g:caser_prefix          Allows for customizing the prefix used in all
+                        |vim-caser| mappings. Example: to use 'gc' as the
+                        prefix -- making commands such as 'gcs' to convert text
+                        text to `snake_case`: >
+                              :let g:caser_prefix = 'gc'
+
+==============================================================================
+  vim:tw=78:ts=2:sts=2:sw=2:ft=help:norl:
