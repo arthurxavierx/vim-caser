@@ -42,7 +42,7 @@ gsk{motion}                                        *gsk* *caser-kebab*
 {Visual}gs-             Make {motion} or highlighted text `kebab-case`
 {Visual}gsk             (for {Visual} see |Visual-mode|).
 
-gs.{motion}                                        *gs.* *caser-kebab*
+gs.{motion}                                        *gs.* *caser-dot*
 {Visual}gs.             Make {motion} or highlighted text `dot.case`
                         (for {Visual} see |Visual-mode|).
 
