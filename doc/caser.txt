@@ -38,9 +38,9 @@ gs<space>{motion}                            *gs<space>* *caser-space*
 {Visual}gs<space>       Make {motion} or highlighted text `space case`
                         (for {Visual} see |Visual-mode|).
 
-gs-{motion}                                        *gs-*
+gs-{motion}                                        *gs-* *caser-dash*
 gsk{motion}                                        *gsk* *caser-kebab*
-{Visual}gs-             Make {motion} or highlighted text `kebab-case`
+{Visual}gs-             Make {motion} or highlighted text `dash-case`/`kebab-case`
 {Visual}gsk             (for {Visual} see |Visual-mode|).
 
 gs.{motion}                                        *gs.* *caser-dot*
