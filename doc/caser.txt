@@ -11,9 +11,10 @@ allows you to select with a |movement|, a |text-object| or |Visual-mode|.
 
 ------------------------------------------------------------------------------
 
+gsp{motion}                                        *gsp* *caser-pascal*
 gsm{motion}                                        *gsm* *caser-mixed*
-{Visual}gsm             Make {motion} or highlighted text `MixedCase`
-                        (for {Visual} see |Visual-mode|).
+{Visual}gsp             Make {motion} or highlighted text `PascalCase`/`MixedCase`
+{Visual}gsm             (for {Visual} see |Visual-mode|).
 
 gsc{motion}                                        *gsc* *caser-camel*
 {Visual}gsc             Make {motion} or highlighted text `camelCase`

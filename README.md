@@ -29,13 +29,13 @@ All mappings below must be followed by a motion or a text object, or be applied 
 
  Case | Mapping
 ------|---------
-`MixedCase`  | `gsm`
+`MixedCase` or `PascalCase`  | `gsm` or `gsp`
 `camelCase`  | `gsc`
 `snake_case` | `gss` or `gs_`
 `UPPER_CASE` | `gsu` or `gsU`
 `Title Case` | `gst`
 `space case` | `gs<space>`
-`kebab-case` | `gsk` or `gs-`
+`dash-case` or `kebab-case` | `gs-` or `gsk`
 `dot.case`   | `gs.`
 
 The `gs` prefix can be changed through the option `g:caser_prefix`.

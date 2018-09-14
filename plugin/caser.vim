@@ -70,6 +70,7 @@ endfunction
 " }}}
 
 call s:MapAction('m',       'mixedcase')
+call s:MapAction('p',       'mixedcase')
 call s:MapAction('c',       'camelcase')
 call s:MapAction('s',       'snakecase')
 call s:MapAction('_',       'snakecase')
