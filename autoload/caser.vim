@@ -1,6 +1,6 @@
 " This has been adapted from Tim Pope's amazing abolish.vim
 " <https://github.com/tpope/vim-abolish>
-function! caser#camelcase(word)
+function! caser#CamelCase(word)
   let word = substitute(a:word, '[ .-]', '_', 'g')
   if word !~# '_' && word =~# '\l'
     return substitute(word, '^.', '\l&', '')
@@ -9,11 +9,11 @@ function! caser#camelcase(word)
   endif
 endfunction
 
-function! caser#mixedcase(word)
-  return substitute(caser#camelcase(a:word), '^.', '\u&', '')
+function! caser#MixedCase(word)
+  return substitute(caser#CamelCase(a:word), '^.', '\u&', '')
 endfunction
 
-function! caser#snakecase(word)
+function! caser#SnakeCase(word)
   let word = substitute(a:word, '::', '/', 'g')
   let word = substitute(word, '\(\u\+\)\(\u\l\)', '\1_\2', 'g')
   let word = substitute(word, '\(\l\|\d\)\(\u\)', '\1_\2', 'g')
@@ -22,22 +22,26 @@ function! caser#snakecase(word)
   return word
 endfunction
 
-function! caser#uppercase(word)
-  return toupper(caser#snakecase(a:word))
+function! caser#UpperCase(word)
+  return toupper(caser#SnakeCase(a:word))
 endfunction
 
-function! caser#kebabcase(word)
-  return substitute(caser#snakecase(a:word), '_', '-', 'g')
+function! caser#KebabCase(word)
+  return substitute(caser#SnakeCase(a:word), '_', '-', 'g')
 endfunction
 
-function! caser#spacecase(word)
-  return substitute(caser#snakecase(a:word), '_', ' ', 'g')
+function! caser#SpaceCase(word)
+  return substitute(caser#SnakeCase(a:word), '_', ' ', 'g')
 endfunction
 
-function! caser#titlecase(word)
-  return substitute(caser#spacecase(a:word), '\(\<\w\)', '\=toupper(submatch(1))', 'g')
+function! caser#TitleCase(word)
+  return substitute(caser#SpaceCase(a:word), '\(\<\w\)', '\=toupper(submatch(1))', 'g')
 endfunction
 
-function! caser#dotcase(word)
-  return substitute(caser#snakecase(a:word), '_', '.', 'g')
+function! caser#SentenceCase(word)
+  return substitute(caser#SpaceCase(a:word), '^\(\<\w\)', '\=toupper(submatch(1))', 'g')
+endfunction
+
+function! caser#DotCase(word)
+  return substitute(caser#SnakeCase(a:word), '_', '.', 'g')
 endfunction

@@ -31,9 +31,10 @@ All mappings below must be followed by a motion or a text object, or be applied 
 ------|---------
 `MixedCase` or `PascalCase`  | `gsm` or `gsp`
 `camelCase`  | `gsc`
-`snake_case` | `gss` or `gs_`
+`snake_case` | `gs_`
 `UPPER_CASE` | `gsu` or `gsU`
 `Title Case` | `gst`
+`Sentence case` | `gss`
 `space case` | `gs<space>`
 `dash-case` or `kebab-case` | `gs-` or `gsk`
 `dot.case`   | `gs.`
