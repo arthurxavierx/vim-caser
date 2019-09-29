@@ -49,3 +49,15 @@ endfunction
 function! caser#DotCase(word)
   return substitute(caser#SnakeCase(a:word), '_', '.', 'g')
 endfunction
+
+function! caser#KebabCapsCase(word)
+  return toupper(caser#KebabCase(a:word))
+endfunction
+
+function! caser#DotCapsCase(word)
+  return toupper(caser#DotCase(a:word))
+endfunction
+
+function! caser#SpaceCapsCase(word)
+  return toupper(caser#SpaceCase(a:word))
+endfunction

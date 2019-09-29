@@ -94,6 +94,21 @@ custom mappings. For example |<Plug>CaserCamelCase| corresponds to the
 <Plug>CaserDotCase                                 *<Plug>CaserDotCase*
 <Plug>CaserVDotCase                                *<Plug>CaserVDotCase*
 
+In addition to mappings that correspond to default bindings, a few mappings
+have no default but can still be used in custom mappings.
+
+<Plug>CaserSpaceCapsCase                           *<Plug>CaserSpaceCapsCase*
+<Plug>CaserVSpaceCapsCase                          *<Plug>CaserVSpaceCapsCase*
+                        Make {motion} or highlighted text `SPACE CASE`.
+
+<Plug>CaserKebabCapsCase                           *<Plug>CaserKebabCapsCase*
+<Plug>CaserVKebabCapsCase                          *<Plug>CaserVKebabCapsCase*
+                        Make {motion} or highlighted text `KEBAB-CASE`.
+
+<Plug>CaserDotCapsCase                             *<Plug>CaserDotCapsCase*
+<Plug>CaserVDotCapsCase                            *<Plug>CaserVDotCapsCase*
+                        Make {motion} or highlighted text `DOT.CASE`.
+
 ------------------------------------------------------------------------------
 
 OPTIONS                                            *caser-options*
