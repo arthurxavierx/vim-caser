@@ -11,6 +11,8 @@ allows you to select with a |movement|, a |text-object| or |Visual-mode|.
 
 ------------------------------------------------------------------------------
 
+DEFAULT MAPPINGS                                   *caser-defaults*
+
 gsp{motion}                                        *gsp* *caser-pascal*
 gsm{motion}                                        *gsm* *caser-mixed*
 {Visual}gsp             Make {motion} or highlighted text `PascalCase`/`MixedCase`
@@ -52,6 +54,43 @@ gs.{motion}                                        *gs.* *caser-dot*
 
 ------------------------------------------------------------------------------
 
+MAPPINGS                                               *caser-mappings*
+
+Each default mapping corresponds to a |<Plug>| mapping which can be used to set
+custom mappings. For example |<Plug>CaserCamelCase| corresponds to the
+|caser-mixed| default normal mode binding 'gsc{motion}', while
+|<Plug>CaserVCamelCase| corresponds to the default visual mode binding
+'{Visual}gsc'.
+
+<Plug>CaserMixedCase                 *<Plug>CaserMixedCase*
+<Plug>CaserVMixedCase                *<Plug>CaserVMixedCase*
+
+<Plug>CaserCamelCase                 *<Plug>CaserCamelCase*
+<Plug>CaserVCamelCase                *<Plug>CaserVCamelCase*
+
+<Plug>CaserSnakeCase                 *<Plug>CaserSnakeCase*
+<Plug>CaserVSnakeCase                *<Plug>CaserVSnakeCase*
+
+<Plug>CaserUpperCase                 *<Plug>CaserUpperCase*
+<Plug>CaserVUpperCase                *<Plug>CaserVUpperCase*
+
+<Plug>CaserTitleCase                 *<Plug>CaserTitleCase*
+<Plug>CaserVTitleCase                *<Plug>CaserVTitleCase*
+
+<Plug>CaserSentenceCase              *<Plug>CaserSentenceCase*
+<Plug>CaserVSentenceCase             *<Plug>CaserVSentenceCase*
+
+<Plug>CaserSpaceCase                 *<Plug>CaserSpaceCase*
+<Plug>CaserVSpaceCase                *<Plug>CaserVSpaceCase*
+
+<Plug>CaserKebabCase                 *<Plug>CaserKebabCase*
+<Plug>CaserVKebabCase                *<Plug>CaserVKebabCase*
+
+<Plug>CaserDotCase                   *<Plug>CaserDotCase*
+<Plug>CaserVDotCase                  *<Plug>CaserVDotCase*
+
+------------------------------------------------------------------------------
+
 OPTIONS                                                *caser-options*
 
                                                       *g:caser_prefix*
@@ -60,6 +99,17 @@ g:caser_prefix          Allows for customizing the prefix used in all
                         prefix -- making commands such as 'gcs' to convert text
                         text to `snake_case`: >
                               :let g:caser_prefix = 'gc'
+
+                                                      *g:caser_no_mappings*
+g:caser_no_mappings     Disable default mappings. The value of |g:caser_prefix|
+                        is ignored. See |caser-mappings| for setting custom
+                        mappings. Example: to use 'c' for `camelCase` and 'C'
+                        for `MixedCase`, but not set any other mappings: >
+                              :let g:caser_no_mappings = 1
+                              :nmap gsc <Plug>CaserCamelCase
+                              :xmap gsc <Plug>CaserVCamelCase
+                              :nmap gsC <Plug>CaserMixedCase
+                              :xmap gsC <Plug>CaserVMixedCase
 
 ==============================================================================
   vim:tw=78:ts=2:sts=2:sw=2:ft=help:norl:
