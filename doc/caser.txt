@@ -35,11 +35,11 @@ gst{motion}                                        *gst* *caser-title*
 {Visual}gst             Make {motion} or highlighted text `Title Case`
                         (for {Visual} see |Visual-mode|).
 
-gss{motion}                                     *gss* *caser-sentence*
+gss{motion}                                        *gss* *caser-sentence*
 {Visual}gss             Make {motion} or highlighted text `Sentence case`
                         (for {Visual} see |Visual-mode|).
 
-gs<space>{motion}                            *gs<space>* *caser-space*
+gs<space>{motion}                                  *gs<space>* *caser-space*
 {Visual}gs<space>       Make {motion} or highlighted text `space case`
                         (for {Visual} see |Visual-mode|).
 
@@ -54,7 +54,7 @@ gs.{motion}                                        *gs.* *caser-dot*
 
 ------------------------------------------------------------------------------
 
-MAPPINGS                                               *caser-mappings*
+MAPPINGS                                           *caser-mappings*
 
 Each default mapping corresponds to a |<Plug>| mapping which can be used to set
 custom mappings. For example |<Plug>CaserCamelCase| corresponds to the
@@ -62,45 +62,45 @@ custom mappings. For example |<Plug>CaserCamelCase| corresponds to the
 |<Plug>CaserVCamelCase| corresponds to the default visual mode binding
 '{Visual}gsc'.
 
-<Plug>CaserMixedCase                 *<Plug>CaserMixedCase*
-<Plug>CaserVMixedCase                *<Plug>CaserVMixedCase*
+<Plug>CaserMixedCase                               *<Plug>CaserMixedCase*
+<Plug>CaserVMixedCase                              *<Plug>CaserVMixedCase*
 
-<Plug>CaserCamelCase                 *<Plug>CaserCamelCase*
-<Plug>CaserVCamelCase                *<Plug>CaserVCamelCase*
+<Plug>CaserCamelCase                               *<Plug>CaserCamelCase*
+<Plug>CaserVCamelCase                              *<Plug>CaserVCamelCase*
 
-<Plug>CaserSnakeCase                 *<Plug>CaserSnakeCase*
-<Plug>CaserVSnakeCase                *<Plug>CaserVSnakeCase*
+<Plug>CaserSnakeCase                               *<Plug>CaserSnakeCase*
+<Plug>CaserVSnakeCase                              *<Plug>CaserVSnakeCase*
 
-<Plug>CaserUpperCase                 *<Plug>CaserUpperCase*
-<Plug>CaserVUpperCase                *<Plug>CaserVUpperCase*
+<Plug>CaserUpperCase                               *<Plug>CaserUpperCase*
+<Plug>CaserVUpperCase                              *<Plug>CaserVUpperCase*
 
-<Plug>CaserTitleCase                 *<Plug>CaserTitleCase*
-<Plug>CaserVTitleCase                *<Plug>CaserVTitleCase*
+<Plug>CaserTitleCase                               *<Plug>CaserTitleCase*
+<Plug>CaserVTitleCase                              *<Plug>CaserVTitleCase*
 
-<Plug>CaserSentenceCase              *<Plug>CaserSentenceCase*
-<Plug>CaserVSentenceCase             *<Plug>CaserVSentenceCase*
+<Plug>CaserSentenceCase                            *<Plug>CaserSentenceCase*
+<Plug>CaserVSentenceCase                           *<Plug>CaserVSentenceCase*
 
-<Plug>CaserSpaceCase                 *<Plug>CaserSpaceCase*
-<Plug>CaserVSpaceCase                *<Plug>CaserVSpaceCase*
+<Plug>CaserSpaceCase                               *<Plug>CaserSpaceCase*
+<Plug>CaserVSpaceCase                              *<Plug>CaserVSpaceCase*
 
-<Plug>CaserKebabCase                 *<Plug>CaserKebabCase*
-<Plug>CaserVKebabCase                *<Plug>CaserVKebabCase*
+<Plug>CaserKebabCase                               *<Plug>CaserKebabCase*
+<Plug>CaserVKebabCase                              *<Plug>CaserVKebabCase*
 
-<Plug>CaserDotCase                   *<Plug>CaserDotCase*
-<Plug>CaserVDotCase                  *<Plug>CaserVDotCase*
+<Plug>CaserDotCase                                 *<Plug>CaserDotCase*
+<Plug>CaserVDotCase                                *<Plug>CaserVDotCase*
 
 ------------------------------------------------------------------------------
 
-OPTIONS                                                *caser-options*
+OPTIONS                                            *caser-options*
 
-                                                      *g:caser_prefix*
+                                                   *g:caser_prefix*
 g:caser_prefix          Allows for customizing the prefix used in all
                         |vim-caser| mappings. Example: to use 'gc' as the
                         prefix -- making commands such as 'gcs' to convert text
                         text to `snake_case`: >
                               :let g:caser_prefix = 'gc'
 
-                                                      *g:caser_no_mappings*
+                                                   *g:caser_no_mappings*
 g:caser_no_mappings     Disable default mappings. The value of |g:caser_prefix|
                         is ignored. See |caser-mappings| for setting custom
                         mappings. Example: to use 'c' for `camelCase` and 'C'
