@@ -66,33 +66,42 @@ custom mappings. For example |<Plug>CaserCamelCase| corresponds to the
 
 <Plug>CaserMixedCase                               *<Plug>CaserMixedCase*
 <Plug>CaserVMixedCase                              *<Plug>CaserVMixedCase*
+                        Make {motion} or highlighted text `MixedCase`.
 
 <Plug>CaserCamelCase                               *<Plug>CaserCamelCase*
 <Plug>CaserVCamelCase                              *<Plug>CaserVCamelCase*
+                        Make {motion} or highlighted text `camelCase`.
 
 <Plug>CaserSnakeCase                               *<Plug>CaserSnakeCase*
 <Plug>CaserVSnakeCase                              *<Plug>CaserVSnakeCase*
+                        Make {motion} or highlighted text `snake_case`.
 
 <Plug>CaserUpperCase                               *<Plug>CaserUpperCase*
 <Plug>CaserVUpperCase                              *<Plug>CaserVUpperCase*
+                        Make {motion} or highlighted text `UPPER_CASE`.
 
 <Plug>CaserTitleCase                               *<Plug>CaserTitleCase*
 <Plug>CaserVTitleCase                              *<Plug>CaserVTitleCase*
+                        Make {motion} or highlighted text `Title Case`.
 
 <Plug>CaserSentenceCase                            *<Plug>CaserSentenceCase*
 <Plug>CaserVSentenceCase                           *<Plug>CaserVSentenceCase*
+                        Make {motion} or highlighted text `Sentence case`.
 
 <Plug>CaserSpaceCase                               *<Plug>CaserSpaceCase*
 <Plug>CaserVSpaceCase                              *<Plug>CaserVSpaceCase*
+                        Make {motion} or highlighted text `space case`.
 
 <Plug>CaserKebabCase                               *<Plug>CaserKebabCase*
 <Plug>CaserVKebabCase                              *<Plug>CaserVKebabCase*
+                        Make {motion} or highlighted text `kebab-case`.
 
 <Plug>CaserTitleKebabCase                          *<Plug>CaserTitleKebabCase*
 <Plug>CaserVTitleKebabCase                         *<Plug>CaserVTitleKebabCase*
 
 <Plug>CaserDotCase                                 *<Plug>CaserDotCase*
 <Plug>CaserVDotCase                                *<Plug>CaserVDotCase*
+                        Make {motion} or highlighted text `dot.case`.
 
 In addition to mappings that correspond to default bindings, a few mappings
 have no default but can still be used in custom mappings.
