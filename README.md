@@ -27,19 +27,19 @@ Plug 'arthurxavierx/vim-caser'
 
 All mappings below must be followed by a motion or a text object, or be applied within visual mode.
 
- Case | Mapping
-------|---------
-`MixedCase` or `PascalCase`  | `gsm` or `gsp`
-`camelCase`  | `gsc`
-`snake_case` | `gs_`
-`UPPER_CASE` | `gsu` or `gsU`
-`Title Case` | `gst`
-`Sentence case` | `gss`
-`space case` | `gs<space>`
-`dash-case` or `kebab-case` | `gs-` or `gsk`
-`dot.case`   | `gs.`
+ Case | Default Mapping | Plug Mapping (normal/visual)
+------|-----------------|------------------------------
+`MixedCase` or `PascalCase`  | `gsm` or `gsp` | `<Plug>CaserMixedCase`/`<Plug>CaserVMixedCase`
+`camelCase`  | `gsc` | `<Plug>CaserCamelCase`/`<Plug>CaserVCamelCase`
+`snake_case` | `gs_` | `<Plug>CaserSnakeCase`/`<Plug>CaserVSnakeCase`
+`UPPER_CASE` | `gsu` or `gsU` | `<Plug>CaserUpperCase`/`<Plug>CaserVUpperCase`
+`Title Case` | `gst` | `<Plug>CaserTitleCase`/`<Plug>CaserVTitleCase`
+`Sentence case` | `gss` | `<Plug>CaserSentenceCase`/`<Plug>CaserVSentenceCase`
+`space case` | `gs<space>` | `<Plug>CaserSpaceCase`/`<Plug>CaserVSpaceCase`
+`dash-case` or `kebab-case` | `gs-` or `gsk` | `<Plug>CaserKebabCase`/`<Plug>CaserVKebabCase`
+`dot.case`   | `gs.` | `<Plug>CaserDotCase`/`<Plug>CaserVDotCase`
 
-The `gs` prefix can be changed through the option `g:caser_prefix`.
+The `gs` prefix can be changed through the option `g:caser_prefix`. Alternatively, the default mappings can be disabled by setting `g:caser_no_mappings`.
 
 ### Limitations
 Currently `vim-caser` only supports the casing options displayed in the table above. If you would like to have another casing option in `vim-caser`, please feel free to create an issue in this repository, or to submit a pull request with the feature properly documented.
@@ -48,3 +48,4 @@ Currently `vim-caser` only supports the casing options displayed in the table ab
  Name | Default | Description
 ------|---------|-------------
 `g:caser_prefix` | `gs` | The prefix of all mappings created by `vim-caser`. E.g.: `gsc`, `gs-`, `gsu`, etc.
+`g:caser_no_mappings` | not set | Set to `1` to disable default mappings. Custom mappings can be set using the `<Plug>` mappings.
