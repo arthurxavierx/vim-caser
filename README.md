@@ -37,6 +37,7 @@ All mappings below must be followed by a motion or a text object, or be applied 
 `Sentence case` | `gss` | `<Plug>CaserSentenceCase`/`<Plug>CaserVSentenceCase`
 `space case` | `gs<space>` | `<Plug>CaserSpaceCase`/`<Plug>CaserVSpaceCase`
 `dash-case` or `kebab-case` | `gs-` or `gsk` | `<Plug>CaserKebabCase`/`<Plug>CaserVKebabCase`
+`Title-Dash-Case` or `Title-Kebab-Case` | `gsK` | `<Plug>CaserTitleKebabCase`/`<Plug>CaserVTitleKebabCase`
 `dot.case`   | `gs.` | `<Plug>CaserDotCase`/`<Plug>CaserVDotCase`
 
 The `gs` prefix can be changed through the option `g:caser_prefix`. Alternatively, the default mappings can be disabled by setting `g:caser_no_mappings`.
