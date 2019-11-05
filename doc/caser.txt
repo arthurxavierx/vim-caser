@@ -45,8 +45,10 @@ gs<space>{motion}                                  *gs<space>* *caser-space*
 
 gs-{motion}                                        *gs-* *caser-dash*
 gsk{motion}                                        *gsk* *caser-kebab*
+gsK{motion}                                        *gsK* *caser-title-kebab*
 {Visual}gs-             Make {motion} or highlighted text `dash-case`/`kebab-case`
 {Visual}gsk             (for {Visual} see |Visual-mode|).
+{Visual}gsK
 
 gs.{motion}                                        *gs.* *caser-dot*
 {Visual}gs.             Make {motion} or highlighted text `dot.case`
@@ -85,6 +87,9 @@ custom mappings. For example |<Plug>CaserCamelCase| corresponds to the
 
 <Plug>CaserKebabCase                               *<Plug>CaserKebabCase*
 <Plug>CaserVKebabCase                              *<Plug>CaserVKebabCase*
+
+<Plug>CaserTitleKebabCase                          *<Plug>CaserTitleKebabCase*
+<Plug>CaserVTitleKebabCase                         *<Plug>CaserVTitleKebabCase*
 
 <Plug>CaserDotCase                                 *<Plug>CaserDotCase*
 <Plug>CaserVDotCase                                *<Plug>CaserVDotCase*
