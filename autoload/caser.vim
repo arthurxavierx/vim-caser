@@ -30,6 +30,10 @@ function! caser#KebabCase(word)
   return substitute(caser#SnakeCase(a:word), '_', '-', 'g')
 endfunction
 
+function! caser#TitleKebabCase(word)
+  return substitute(caser#TitleCase(a:word), ' ', '-', 'g')
+endfunction
+
 function! caser#SpaceCase(word)
   return substitute(caser#SnakeCase(a:word), '_', ' ', 'g')
 endfunction
