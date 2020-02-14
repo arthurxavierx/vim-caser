@@ -9,6 +9,26 @@ if !exists('g:caser_prefix')
   let g:caser_prefix = 'gs'
 endif
 
+let s:caser_default_mappings = {
+      \ 'MixedCase': ['m', 'p'],
+      \ 'CamelCase': ['c'],
+      \ 'SnakeCase': ['_'],
+      \ 'UpperCase': ['u', 'U'],
+      \ 'TitleCase': ['t'],
+      \ 'SentenceCase': ['s'],
+      \ 'SpaceCase': ['<space>'],
+      \ 'SpaceCapsCase': [],
+      \ 'KebabCase': ['k', '-'],
+      \ 'TitleKebabCase': ['K'],
+      \ 'KebabCapsCase': [],
+      \ 'DotCase': ['.'],
+      \ 'DotCapsCase': []
+      \ }
+
+if !exists('g:caser_custom_mappings')
+  let g:caser_custom_mappings = {}
+endif
+
 " }}}
 
 " Setup {{{
@@ -90,16 +110,12 @@ endfunction
 
 " }}}
 
-call s:MapAction('MixedCase', ['m', 'p'])
-call s:MapAction('CamelCase', ['c'])
-call s:MapAction('SnakeCase', ['_'])
-call s:MapAction('UpperCase', ['u', 'U'])
-call s:MapAction('TitleCase', ['t'])
-call s:MapAction('SentenceCase', ['s'])
-call s:MapAction('SpaceCase', ['<space>'])
-call s:MapAction('SpaceCapsCase', [])
-call s:MapAction('KebabCase', ['k', '-'])
-call s:MapAction('TitleKebabCase', ['K'])
-call s:MapAction('KebabCapsCase', [])
-call s:MapAction('DotCase', ['.'])
-call s:MapAction('DotCapsCase', [])
+function! s:MapAllActions()
+  for pair in items(s:caser_default_mappings)
+    let fn = pair[0]
+    let keys = get(g:caser_custom_mappings, fn, pair[1])
+    call s:MapAction(fn, keys)
+  endfor
+endfunction
+
+call s:MapAllActions()
