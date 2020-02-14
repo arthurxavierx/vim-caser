@@ -129,6 +129,53 @@ g:caser_prefix          Allows for customizing the prefix used in all
                         text to `snake_case`: >
                               :let g:caser_prefix = 'gc'
 
+                                                   *g:caser_custom_mappings*
+g:caser_custom_mappings Override the default mappings for specific conversions.
+                        Defined as a dictionary with CamelCase keys for each
+                        conversion.
+
+                        For context, the default mappings are:
+
+                        let s:caser_default_mappings = {
+                              \ 'MixedCase': ['m', 'p'],
+                              \ 'CamelCase': ['c'],
+                              \ 'SnakeCase': ['_'],
+                              \ 'UpperCase': ['u', 'U'],
+                              \ 'TitleCase': ['t'],
+                              \ 'SentenceCase': ['s'],
+                              \ 'SpaceCase': ['<space>'],
+                              \ 'SpaceCapsCase': [],
+                              \ 'KebabCase': ['k', '-'],
+                              \ 'TitleKebabCase': ['K'],
+                              \ 'KebabCapsCase': [],
+                              \ 'DotCase': ['.'],
+                              \ 'DotCapsCase': []
+                              \ }
+
+                        |g:caser_custom_mappings| can be used to selectively
+                        override mappings for some conversions, while leaving
+                        others unchanged.
+
+                        Example: We override the mappings for `CamelCase`,
+                        `MixedCase`, `SnakeCase`, and `UpperCase`. We keep the
+                        defaults for `KebabCase` and `DotCase`, and disable all
+                        other mappings: >
+
+                        let g:caser_custom_mappings = {
+                              \ 'MixedCase': ['C'],
+                              \ 'CamelCase': ['c'],
+                              \ 'SnakeCase': ['s'],
+                              \ 'UpperCase': ['S'],
+                              \ 'TitleCase': [],
+                              \ 'SentenceCase': [],
+                              \ 'SpaceCase': [],
+                              \ 'SpaceCapsCase': [],
+                              \ 'TitleKebabCase': [],
+                              \ 'KebabCapsCase': [],
+                              \ 'DotCapsCase': []
+                              \ }
+
+
                                                    *g:caser_no_mappings*
 g:caser_no_mappings     Disable default mappings. The value of |g:caser_prefix|
                         is ignored. See |caser-mappings| for setting custom
