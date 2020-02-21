@@ -66,33 +66,58 @@ custom mappings. For example |<Plug>CaserCamelCase| corresponds to the
 
 <Plug>CaserMixedCase                               *<Plug>CaserMixedCase*
 <Plug>CaserVMixedCase                              *<Plug>CaserVMixedCase*
+                        Make {motion} or highlighted text `MixedCase`.
 
 <Plug>CaserCamelCase                               *<Plug>CaserCamelCase*
 <Plug>CaserVCamelCase                              *<Plug>CaserVCamelCase*
+                        Make {motion} or highlighted text `camelCase`.
 
 <Plug>CaserSnakeCase                               *<Plug>CaserSnakeCase*
 <Plug>CaserVSnakeCase                              *<Plug>CaserVSnakeCase*
+                        Make {motion} or highlighted text `snake_case`.
 
 <Plug>CaserUpperCase                               *<Plug>CaserUpperCase*
 <Plug>CaserVUpperCase                              *<Plug>CaserVUpperCase*
+                        Make {motion} or highlighted text `UPPER_CASE`.
 
 <Plug>CaserTitleCase                               *<Plug>CaserTitleCase*
 <Plug>CaserVTitleCase                              *<Plug>CaserVTitleCase*
+                        Make {motion} or highlighted text `Title Case`.
 
 <Plug>CaserSentenceCase                            *<Plug>CaserSentenceCase*
 <Plug>CaserVSentenceCase                           *<Plug>CaserVSentenceCase*
+                        Make {motion} or highlighted text `Sentence case`.
 
 <Plug>CaserSpaceCase                               *<Plug>CaserSpaceCase*
 <Plug>CaserVSpaceCase                              *<Plug>CaserVSpaceCase*
+                        Make {motion} or highlighted text `space case`.
 
 <Plug>CaserKebabCase                               *<Plug>CaserKebabCase*
 <Plug>CaserVKebabCase                              *<Plug>CaserVKebabCase*
+                        Make {motion} or highlighted text `kebab-case`.
 
 <Plug>CaserTitleKebabCase                          *<Plug>CaserTitleKebabCase*
 <Plug>CaserVTitleKebabCase                         *<Plug>CaserVTitleKebabCase*
+                        Make {motion} or highlighted text `Kebab-Case`.
 
 <Plug>CaserDotCase                                 *<Plug>CaserDotCase*
 <Plug>CaserVDotCase                                *<Plug>CaserVDotCase*
+                        Make {motion} or highlighted text `dot.case`.
+
+In addition to mappings that correspond to default bindings, a few mappings
+have no default but can still be used in custom mappings.
+
+<Plug>CaserSpaceCapsCase                           *<Plug>CaserSpaceCapsCase*
+<Plug>CaserVSpaceCapsCase                          *<Plug>CaserVSpaceCapsCase*
+                        Make {motion} or highlighted text `SPACE CASE`.
+
+<Plug>CaserKebabCapsCase                           *<Plug>CaserKebabCapsCase*
+<Plug>CaserVKebabCapsCase                          *<Plug>CaserVKebabCapsCase*
+                        Make {motion} or highlighted text `KEBAB-CASE`.
+
+<Plug>CaserDotCapsCase                             *<Plug>CaserDotCapsCase*
+<Plug>CaserVDotCapsCase                            *<Plug>CaserVDotCapsCase*
+                        Make {motion} or highlighted text `DOT.CASE`.
 
 ------------------------------------------------------------------------------
 
@@ -104,6 +129,53 @@ g:caser_prefix          Allows for customizing the prefix used in all
                         prefix -- making commands such as 'gcs' to convert text
                         text to `snake_case`: >
                               :let g:caser_prefix = 'gc'
+
+                                                   *g:caser_custom_mappings*
+g:caser_custom_mappings Override the default mappings for specific conversions.
+                        Defined as a dictionary with CamelCase keys for each
+                        conversion.
+
+                        For context, the default mappings are:
+
+                        let s:caser_default_mappings = {
+                              \ 'MixedCase': ['m', 'p'],
+                              \ 'CamelCase': ['c'],
+                              \ 'SnakeCase': ['_'],
+                              \ 'UpperCase': ['u', 'U'],
+                              \ 'TitleCase': ['t'],
+                              \ 'SentenceCase': ['s'],
+                              \ 'SpaceCase': ['<space>'],
+                              \ 'SpaceCapsCase': [],
+                              \ 'KebabCase': ['k', '-'],
+                              \ 'TitleKebabCase': ['K'],
+                              \ 'KebabCapsCase': [],
+                              \ 'DotCase': ['.'],
+                              \ 'DotCapsCase': []
+                              \ }
+
+                        |g:caser_custom_mappings| can be used to selectively
+                        override mappings for some conversions, while leaving
+                        others unchanged.
+
+                        Example: We override the mappings for `CamelCase`,
+                        `MixedCase`, `SnakeCase`, and `UpperCase`. We keep the
+                        defaults for `KebabCase` and `DotCase`, and disable all
+                        other mappings: >
+
+                        let g:caser_custom_mappings = {
+                              \ 'MixedCase': ['C'],
+                              \ 'CamelCase': ['c'],
+                              \ 'SnakeCase': ['s'],
+                              \ 'UpperCase': ['S'],
+                              \ 'TitleCase': [],
+                              \ 'SentenceCase': [],
+                              \ 'SpaceCase': [],
+                              \ 'SpaceCapsCase': [],
+                              \ 'TitleKebabCase': [],
+                              \ 'KebabCapsCase': [],
+                              \ 'DotCapsCase': []
+                              \ }
+
 
                                                    *g:caser_no_mappings*
 g:caser_no_mappings     Disable default mappings. The value of |g:caser_prefix|
