@@ -98,6 +98,7 @@ custom mappings. For example |<Plug>CaserCamelCase| corresponds to the
 
 <Plug>CaserTitleKebabCase                          *<Plug>CaserTitleKebabCase*
 <Plug>CaserVTitleKebabCase                         *<Plug>CaserVTitleKebabCase*
+                        Make {motion} or highlighted text `Kebab-Case`.
 
 <Plug>CaserDotCase                                 *<Plug>CaserDotCase*
 <Plug>CaserVDotCase                                *<Plug>CaserVDotCase*
