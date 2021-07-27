@@ -50,3 +50,15 @@ Currently `vim-caser` only supports the casing options displayed in the table ab
 ------|---------|-------------
 `g:caser_prefix` | `gs` | The prefix of all mappings created by `vim-caser`. E.g.: `gsc`, `gs-`, `gsu`, etc.
 `g:caser_no_mappings` | not set | Set to `1` to disable default mappings. Custom mappings can be set using the `<Plug>` mappings.
+
+### Demo
+
+In this example:
+
+- You record a macro in q `qq`
+- Find the spot with `f';;;`
+- Change to sentence case with `gss`
+- Finish macro `q`
+- Execute in all lines matching `'name'` with `:g/'name'/norm @q`
+
+![vim-caser](https://user-images.githubusercontent.com/4065733/89064580-dc3b0300-d32f-11ea-8c46-d11e21152bcf.gif)
