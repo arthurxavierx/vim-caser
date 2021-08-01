@@ -41,11 +41,13 @@ function! caser#SpaceCase(word)
 endfunction
 
 function! caser#TitleCase(word)
-  return substitute(caser#SpaceCase(a:word), '\(\<\w\)', '\=toupper(submatch(1))', 'g')
+  let word = tolower(a:word)
+  return substitute(caser#SpaceCase(word), '\(\<\w\)', '\=toupper(submatch(1))', 'g')
 endfunction
 
 function! caser#SentenceCase(word)
-  return substitute(caser#SpaceCase(a:word), '^\(\<\w\)', '\=toupper(submatch(1))', 'g')
+  let word = tolower(a:word)
+  return substitute(caser#SpaceCase(word), '^\(\<\w\)', '\=toupper(submatch(1))', 'g')
 endfunction
 
 function! caser#DotCase(word)
